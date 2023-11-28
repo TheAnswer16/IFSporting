@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title> IFSporting </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ad82791e84.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * {
+            font-family: 'Raleway';
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="h-screen flex">
+            <div class="w-[50vw] h-screen flex justify-center flex-col bg-zinc-700">
+                <div class="w-[100%] flex justify-center">
+                    <i class="fa-solid fa-basketball fa-spin color text-lime-500 text-8xl"></i>
+                </div>    
+                <h1 class="text-center text-lime-500 text-5xl"> <b class="text-lime-300">IF</b>Sporting </h1>
+            </div>
+            <div class="w-[50vw] h-screen bg-stone-100" id="auth-content">
+                {% block auth-content  %}
+
+                {% endblock %}
+            </div>
+        </div>
+    </main>
+</body>
+</html>

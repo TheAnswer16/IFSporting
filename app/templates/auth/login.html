@@ -1,0 +1,12 @@
+{% extends 'base/auth_base.html'%}
+
+{% block auth-content  %}
+    <div class="w-[100%] flex justify-center items-center"> 
+        <form action="" id="login-form" class="w-[80%]">
+            <div class="flex flex-col justify-center h-screen">
+                <label for="usuario text-zinc-300 text-6xl"> Usuário </label>
+                <input type="text" name="usuario" id="usuario" class="border-0 outline-0 border-b-2 border-zinc-300 bg-transparent focus:border-b-4 focus:border-lime-700 transition">
+            </div>
+        </form>
+    </div>
+{% endblock %}
