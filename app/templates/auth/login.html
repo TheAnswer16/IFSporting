@@ -1,11 +1,20 @@
 {% extends 'base/auth_base.html'%}
 
 {% block auth-content  %}
-    <div class="w-[100%] flex justify-center items-center"> 
+    <div class="w-[100%] flex justify-center flex-col h-[80vh] items-center"> 
+        <h1 class="text-6xl text-zinc-500"> Bem vindo! </h1>
+        <h2 class="text-4xl mb-12 mt-7 text-zinc-500"> Faça login para continuar: </h2>
         <form action="" id="login-form" class="w-[80%]">
-            <div class="flex flex-col justify-center h-screen">
+            <div class="flex flex-col">
                 <label for="usuario text-zinc-300 text-6xl"> Usuário </label>
-                <input type="text" name="usuario" id="usuario" class="border-0 outline-0 border-b-2 border-zinc-300 bg-transparent focus:border-b-4 focus:border-lime-700 transition">
+                <input type="text" name="usuario" id="usuario" class="border-0 outline-0 border-b-2 border-zinc-300 bg-transparent focus:border-lime-700 transition">
+            </div>
+            <div class="flex flex-col mt-5">
+                <label for="usuario text-zinc-300 text-6xl"> Senha  </label>
+                <input type="password" name="senha" id="senha" class="border-0 outline-0 border-b-2 border-zinc-300 bg-transparent focus:border-lime-700 transition">
+            </div>
+            <div class="flex justify-end">
+                <button type="submit" class="bg-lime-700 text-white px-4 py-2 mt-5 hover:bg-lime-900 transition"> Entrar </button>
             </div>
         </form>
     </div>

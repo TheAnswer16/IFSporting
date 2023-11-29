@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title> IFSporting </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ad82791e84.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * {
+            font-family: 'Raleway';
+        }
+    </style>
+</head>
+<body>
+    <nav class="w-[100%] p-5 bg-lime-700 flex justify-between items-center"> 
+        <div id="logo-nav" class="flex items-center"> 
+            <i class="fa-solid fa-basketball color text-lime-500 text-3xl"></i>
+            <p class="text-center text-lime-500 text-2xl ml-3"> <b class="text-lime-300">IF</b>Sporting </p>
+        </div>
+        <div id="navbar" class="w-[40%] flex items-center">
+            <ul class="flex w-[100%] justify-around">
+                <li class="lg:ml-3 text-white hover:text-lime-300"> <a href="{% url 'categorias' %}"> Categorias </a></li>
+                <li class="lg:ml-3 text-white hover:text-lime-300"> <a href=""> Cursos </a></li>
+                <li class="lg:ml-3 text-white hover:text-lime-300"> <a href=""> Equipes </a></li>
+                <li class="lg:ml-3 text-white hover:text-lime-300"> <a href=""> Esportes </a></li>
+                <li class="lg:ml-3 text-white hover:text-lime-300"> <a href=""> Torneios </a></li>
+                <li class="lg:ml-3 text-white hover:text-lime-300"> <a href=""> Usuarios </a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <section class="bg-stone-100">
+            {% block content  %}
+    
+            {% endblock %}
+        </section>
+    </main>
+</body>
+</html>
