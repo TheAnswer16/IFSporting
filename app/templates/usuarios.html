@@ -1,0 +1,42 @@
+{% extends 'base/base.html'%}
+
+{% block content  %}
+
+    <h1 class="text-3xl self-start mb-4 mt-[300px]"> Usuários </h1>
+
+    <table class="w-[100%] table-auto border-collapse border border-slate-400">
+        <thead>
+            <tr> 
+                <th class="border border-lime-700 p-4 bg-lime-700 text-white"> ID </th>
+                <th class="border border-lime-700 p-4 bg-lime-700 text-white"> Nome </th>
+                <th class="border border-lime-700 p-4 bg-lime-700 text-white"> Data de nascimento </th>
+                <th class="border border-lime-700 p-4 bg-lime-700 text-white"> Matricula </th>
+                <th class="border border-lime-700 p-4 bg-lime-700 text-white"> Data de matricula </th>
+                <th class="border border-lime-700 p-4 bg-lime-700 text-white"> Administrador </th>
+                <th class="border border-lime-700 p-4 bg-lime-700 text-white"> Curso </th>
+                <th class="border border-lime-700 p-4 bg-lime-700 text-white"> Categoria </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for u in usuarios %}
+                <tr class="hover:bg-zinc-300 transition">
+                    <td class="border border-zinc-300 p-4"> {{ u.id }} </td>
+                    <td class="border border-zinc-300 p-4"> {{ u.nome }} </td>
+                    <td class="border border-zinc-300 p-4"> {{ u.data_nasc }} </td>
+                    <td class="border border-zinc-300 p-4"> {{ u.matricula }} </td>
+                    <td class="border border-zinc-300 p-4"> {{ u.data_matricula }} </td>
+                    <td class="border border-zinc-300 p-4">     
+                    {% if u.administrador %}
+                        Sim
+                    {% else %}
+                        Não
+                    {% endif %}
+                    </td>
+                    <td class="border border-zinc-300 p-4"> {{ u.nome_curso }} </td>
+                    <td class="border border-zinc-300 p-4"> {{ u.descricao }} </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

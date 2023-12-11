@@ -1,0 +1,38 @@
+{% extends 'base/base.html'%}
+
+{% block content  %}
+
+    <h1 class="text-3xl self-start mb-4"> Equipes </h1>
+
+    {% for e in equipes %}
+
+        <div class="w-[100%] collapse-item mt-4">
+            <div class="w-[100%] bg-lime-700 p-4 text-white text-2xl flex justify-between collapse-header" id="{{ e.id }}"> {{ e.nome }} - {{e.esporte.nome}} <i class="fa-solid fa-chevron-down"></i> </div>
+            <div class="p-5 bg-zinc-200 border border-zinc-300 hidden collapse-body transition" id="collapse-body-{{e.id}}">
+                <h2 class="text-1xl font-bold"> Integrantes </h2>
+
+                <ul class="mt-2 pl-3">
+                    {% for u in e.usuarios.all %}
+
+                        <li class="mt-1"> {{ u.nome }} </li>
+
+                    {% endfor %}
+                </ul>
+
+                <h2 class="text-1xl font-bold mt-3"> Torneios </h2>
+
+                <ul class="mt-2 pl-3">
+                    {% for t in e.torneios.all %}
+
+                        <li class="mt-1"> {{ t.nome }} </li>
+
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+
+    {% endfor %}
+
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'base/base.html'%}
+
+{% block content  %}
+
+    <h1 class="text-3xl self-start mb-4"> Torneios </h1>
+
+    <table class="w-[100%] table-auto border-collapse border border-slate-400">
+        <thead>
+            <tr> 
+                <th class="border border-lime-700 p-4 bg-lime-700 text-white"> ID </th>
+                <th class="border border-lime-700 p-4 bg-lime-700 text-white"> Torneio </th>
+                <th class="border border-lime-700 p-4 bg-lime-700 text-white"> Ano Limite </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for t in torneios %}
+                <tr class="hover:bg-zinc-300 transition">
+                    <td class="border border-zinc-300 p-4"> {{ t.id }} </td>
+                    <td class="border border-zinc-300 p-4"> {{ t.nome }} </td>
+                    <td class="border border-zinc-300 p-4"> {{ t.ano_limite }} </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

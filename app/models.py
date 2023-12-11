@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 class Usuario (models.Model):
     nome = models.CharField(max_length=50)
-    ususario = models.CharField(max_length=50, default='')
+    usuario = models.CharField(max_length=50, default='')
     senha = models.CharField(max_length=61, default='')
     data_nasc = models.DateField()
     matricula = models.CharField(max_length=10)
